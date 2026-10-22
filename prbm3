@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+long long sumRange(int a, int b) {
+    if (b>a) swap(a, b);
+    long long sum = 0;
+    for (int i = b; i <= a; i++)
+        sum=sum+i;
+    return sum;
+}
+
+int main() {
+    int a, b;
+    cin >> a >> b;
+    cout << sumRange(a, b);
+}

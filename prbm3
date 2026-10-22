@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 long long sumRange(int a, int b) {
     if (b>a) swap(a, b);
     long long sum = 0;
@@ -8,7 +7,6 @@ long long sumRange(int a, int b) {
         sum=sum+i;
     return sum;
 }
-
 int main() {
     int a, b;
     cin >> a >> b;

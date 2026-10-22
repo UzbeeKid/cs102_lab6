@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+bool isPrime(int n) {
+    for (int d = 2; d * d <= n; d++){
+        if (n % d == 0)
+            return 0;
+}
+    return 1;
+}
+int main() {
+    int N, c = 0;
+    cin >> N;
+    for (int p = 2; p + 2 <= N; p++)
+        if (isPrime(p) && isPrime(p + 2)) {
+            cout << "(" << p << "," << p + 2 << ") " ;
+            c++;
+        }
+    cout <<endl<< "count: "  << c;
+}
